@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="linli.Views.MinePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Image HorizontalOptions="Start" WidthRequest="80" Aspect="Fill" HeightRequest="80" Source="https://img.xiaopiu.com/userImages/img418164da758808.jpg"></Image>
+                <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" Text="用户名XXX"></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label VerticalTextAlignment="Center" Text="详细"></Label>
+                    <Image WidthRequest="20" Source="zhaopian.png"></Image>
+                    <Image WidthRequest="20" Source="zhaopian.png"></Image>
+                </StackLayout>
+            </StackLayout>
+            <FlexLayout Wrap="Wrap" >
+                    <StackLayout FlexLayout.Basis="50%">
+                        <StackLayout  Orientation="Horizontal" Margin="10" VerticalOptions="Center" HorizontalOptions="Center" >
+                            <Label Text="12"></Label>
+                            <Label FontSize="16" TextColor="#555" Text="关注我的人"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout FlexLayout.Basis="50%">
+                        <StackLayout Orientation="Horizontal" Margin="10" VerticalOptions="Center" HorizontalOptions="Center" >
+                            <Label FontSize="16" Text="12"></Label>
+                            <Label TextColor="#555" Text="我关注的人"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </FlexLayout>
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Image HorizontalOptions="Start" WidthRequest="30" Aspect="Fill" HeightRequest="30" Source="https://img.xiaopiu.com/userImages/img418164da758808.jpg"></Image>
+                <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" Text="钱包"></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label VerticalTextAlignment="Center" Text="1"></Label>
+                    <Image WidthRequest="20" Source="zhaopian.png"></Image>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Image HorizontalOptions="Start" WidthRequest="30" Aspect="Fill" HeightRequest="30" Source="shouchang.png"></Image>
+                <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" Text="收藏"></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label VerticalTextAlignment="Center" Text="1"></Label>
+                    <Image WidthRequest="20" Source="zhaopian.png"></Image>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Image HorizontalOptions="Start" WidthRequest="30" Aspect="Fill" HeightRequest="30" Source="setting.png"></Image>
+                <Label VerticalTextAlignment="Center" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" Text="设置"></Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label VerticalTextAlignment="Center" Text="1"></Label>
+                    <Image WidthRequest="20" Source="zhaopian.png"></Image>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:linli.CustemViews"
+             mc:Ignorable="d"
+             Title="{Binding Title}" 
+             BackgroundColor="#ededed"
+             x:Class="linli.Views.MessagePage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand">
+                <StackLayout x:Name="stackLayout" Padding="10">
+                            <!--<StackLayout Orientation="Horizontal" HorizontalOptions="End" >
+                                <StackLayout Orientation="Vertical"   >
+                                            <Label TextColor="#555" HorizontalOptions="End" Text="123"></Label>
+                                            <Label Padding="6" BackgroundColor="White"  Text="2大哥哥给发达2大哥哥给发达2"></Label>
+                                            <Label TextColor="#888"  HorizontalOptions="End" Text="12:00:01"></Label>
+                                </StackLayout>
+                                <Image HorizontalOptions="End" HeightRequest = "40" WidthRequest = "40" Source="xamarin_logo.png"></Image>
+                             </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image HeightRequest = "40" WidthRequest = "40" Source="xamarin_logo.png"></Image>
+                                <StackLayout Orientation="Vertical">
+                                            <Label Text="123"></Label>
+                                                <Label Padding="6" BackgroundColor="White"  Text="2大哥哥给发达2大哥哥给发达2">
+                                                </Label>
+                                            <Label Text="123"></Label>
+                                </StackLayout>
+                             </StackLayout>-->
+                </StackLayout>
+            </ScrollView>
+            <StackLayout x:Name="absoluteLayout" VerticalOptions="End" Orientation="Horizontal" BackgroundColor="#ddd" Padding="6">
+                <ImageButton WidthRequest="40"  Padding="5" x:Name="btn_SendAudio" Source="yuyin.png" />
+                <Editor x:Name="editor" BackgroundColor="#fff" HorizontalOptions="FillAndExpand" Margin="0"/>
+                <ImageButton Clicked="btn_OpenActionSheet_Clicked" WidthRequest="40"  Padding="5" x:Name="btn_OpenActionSheet" Source="open.png" />
+            </StackLayout>
+            <ScrollView x:Name="bottomView" IsVisible="true" MinimumHeightRequest="400" Orientation="Vertical">
+                <FlexLayout Wrap="Wrap" >
+                        <StackLayout HeightRequest="62" Margin="0,5" VerticalOptions="Center" HorizontalOptions="Center" FlexLayout.Basis="25%">
+                            <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="zhaopian.png"></ImageButton>
+                            <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="照片"></Label>
+                        </StackLayout>
+                        <StackLayout HeightRequest="62" Margin="0,5" FlexLayout.Basis="25%">
+                            <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="tonghua.png"></ImageButton>
+                            <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="通话"></Label>
+                        </StackLayout>
+                        <StackLayout HeightRequest="62" Margin="0,5" FlexLayout.Basis="25%">
+                            <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="shouchang.png"></ImageButton>
+                            <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="收藏"></Label>
+                        </StackLayout>
+                        <StackLayout HeightRequest="62" Margin="0,5" FlexLayout.Basis="25%">
+                            <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="weizhi.png"></ImageButton>
+                            <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="位置"></Label>
+                        </StackLayout>
+                        <StackLayout HeightRequest="62" Margin="0,5" FlexLayout.Basis="25%">
+                            <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="biaoqing.png"></ImageButton>
+                            <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="表情"></Label>
+                        </StackLayout>
+                        <StackLayout HeightRequest="62" Margin="0,5" FlexLayout.Basis="25%">
+                            <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="wenjian.png"></ImageButton>
+                            <Label  HorizontalTextAlignment="Center" Text="文件"></Label>
+                        </StackLayout>
+                        <StackLayout HeightRequest="62" Margin="0,5" FlexLayout.Basis="25%">
+                            <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="hongbao.png"></ImageButton>
+                            <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="红包"></Label>
+                        </StackLayout>
+                </FlexLayout>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

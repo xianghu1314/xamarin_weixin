@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+            xmlns:views="clr-namespace:linli.Views"
+            x:Class="linli.Views.MainPage"
+            >
+    <TabbedPage.Children>
+        <NavigationPage Title="聊天">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="msg.png" />
+                    <On Platform="Android" Value="@mipmap/msg" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views:ItemsPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="关注">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="guanzhu.png" />
+                    <On Platform="Android" Value="@Mipmap/guanzhu" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views:ContactsPage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="服务">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="building.png" />
+                    <On Platform="Android" Value="@Mipmap/building.png" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views:ServicePage />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="我的">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="mine.png" />
+                    <On Platform="Android" Value="@Mipmap/mine.png" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <views:MePage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+</TabbedPage>

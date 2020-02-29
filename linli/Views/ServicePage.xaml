@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             x:Class="linli.Views.ServicePage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Fill" Orientation="Horizontal">
+               <Picker IsVisible="false" SelectedIndex="1" HeightRequest="50" WidthRequest="100" ItemsSource="{Binding Xialas}"></Picker>
+               <StackLayout WidthRequest="80" Margin="10,0" Orientation="Horizontal" VerticalOptions="Center">
+                   <Label MaxLines="1">XXXXXX</Label>
+                   <Image HorizontalOptions="End" WidthRequest="20" Source="xiala.png"></Image>
+               </StackLayout>
+               <Frame HorizontalOptions="FillAndExpand" Margin="0,10,10,10" CornerRadius="18.5" Padding="10,0" BorderColor="#bbb" HasShadow="False">
+                   <StackLayout Orientation="Horizontal">
+                       <Image HorizontalOptions="Start" WidthRequest="20" Source="search.png"></Image>
+                       <Entry BackgroundColor="White" HorizontalOptions="FillAndExpand" HeightRequest="35" ></Entry>
+                   </StackLayout>
+               </Frame>
+           </StackLayout>
+            <CarouselView HeightRequest="200" Margin="0" HorizontalOptions="Start" ItemsSource="{Binding Menus}" IndicatorView="indicatorView">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <FlexLayout Wrap="Wrap" Padding="0" >
+                            <StackLayout HeightRequest="50" Margin="0,5" FlexLayout.Basis="20%">
+                                <ImageButton Aspect="AspectFill" BorderWidth="0" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30"  BackgroundColor="White"  Source="zhaopian.png"></ImageButton>
+                                <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="{Binding .}"></Label>
+                            </StackLayout>
+                            <StackLayout HeightRequest="50" Margin="0,5" FlexLayout.Basis="20%">
+                                <ImageButton Aspect="AspectFill" BorderWidth="0" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30"   Source="tonghua.png"></ImageButton>
+                                <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="通话"></Label>
+                            </StackLayout>
+                            <StackLayout HeightRequest="50" Margin="0,5" FlexLayout.Basis="20%">
+                                <ImageButton Aspect="AspectFill" BorderWidth="0" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30"  Source="shouchang.png"></ImageButton>
+                                <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="收藏"></Label>
+                            </StackLayout>
+                            <StackLayout HeightRequest="50" Margin="0,5" FlexLayout.Basis="20%">
+                                <ImageButton Aspect="AspectFill" BorderWidth="0" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30"  Source="weizhi.png"></ImageButton>
+                                <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="位置"></Label>
+                            </StackLayout>
+                            <StackLayout HeightRequest="50" Margin="0,5" FlexLayout.Basis="20%">
+                                <ImageButton Aspect="AspectFill" BorderWidth="0" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30"  Source="biaoqing.png"></ImageButton>
+                                <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="表情"></Label>
+                            </StackLayout>
+                            <StackLayout HeightRequest="50" Margin="0,5" FlexLayout.Basis="20%">
+                                <ImageButton Aspect="AspectFill" BorderWidth="0" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30"  Source="wenjian.png"></ImageButton>
+                                <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="文件"></Label>
+                            </StackLayout>
+                            <StackLayout HeightRequest="50" Margin="0,5" FlexLayout.Basis="20%">
+                                <ImageButton Aspect="AspectFill" BorderWidth="0" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30"  Source="hongbao.png"></ImageButton>
+                                <Label FontSize="12" HorizontalTextAlignment="Center" HeightRequest="20" Text="红包"></Label>
+                            </StackLayout>
+                        </FlexLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Fill" />
+            <CollectionView ItemsSource="{Binding TrailRecords}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Image VerticalOptions="Start" Source="{Binding CreateUser.HeadImgUrl}"></Image>
+                            <StackLayout Margin="10,0,0,0" HorizontalOptions="FillAndExpand">
+                                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                                    <Label HorizontalOptions="StartAndExpand" Text="{Binding CreateUser.Name}"></Label>
+                                    <Label HorizontalOptions="End" FontSize="14" TextColor="#719CE8" Text="+关注"></Label>
+                                </StackLayout>
+                                <Label Text="{Binding Content}"></Label>
+                                <FlexLayout Wrap="Wrap" WidthRequest="212" HorizontalOptions="Start">
+                                    <Image WidthRequest="100" Margin="3" Source="{Binding Images[0]}"></Image>
+                                    <Image WidthRequest="100" Margin="3" Source="{Binding Images[1]}"></Image>
+                                    <Image WidthRequest="100" Margin="3" Source="{Binding Images[3]}"></Image>
+                                    <Image WidthRequest="100" Margin="3" Source="{Binding Images[4]}"></Image>
+                                </FlexLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label HorizontalOptions="StartAndExpand" FontSize="12" TextColor="#888" Text="{Binding CreateTime,StringFormat='{0:t}'}"></Label>
+                                    <Image HorizontalOptions="End" WidthRequest="20" Source="msg.png"></Image>
+                                </StackLayout>
+                                <CollectionView HeightRequest="30" Margin="0" ItemsSource="{Binding Comments}">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackLayout Orientation="Horizontal" Padding="6" Margin="0,-6,0,0" BackgroundColor="#eee">
+                                                <Label  FontSize="12" TextColor="#7C87A8" Text="{Binding CreateUser.Name, StringFormat='{0}:'}"></Label>
+                                                <Label  FontSize="12" Text="{Binding Content}"></Label>
+                                            </StackLayout>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" BackgroundColor="#eee"></BoxView>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

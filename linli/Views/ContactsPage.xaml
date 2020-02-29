@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             Title="{Binding Title}" x:Class="linli.Views.ContactsPage">
+    <ContentPage.ToolbarItems Style="{StaticResource ToolbarItems}">
+        <ToolbarItem IconImageSource="tianjia_guanzhu.png" Text="Add" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+             <SearchBar x:Name="searchBar" Placeholder="搜索" TextColor="Gray" BackgroundColor="White"></SearchBar>
+             <ListView ItemsSource="{Binding Attentions}"
+                      IsGroupingEnabled="true"
+                      BackgroundColor="White"
+                      GroupDisplayBinding="{Binding GroupTitle}"
+                      GroupShortNameBinding="{Binding ShortName}">
+                 <ListView.RowHeight>
+                     <OnPlatform x:TypeArguments="x:Int32"
+                                 iOS="80"
+                                 Android="80"
+                                 WinPhone="90" />
+                 </ListView.RowHeight>
+
+                 <ListView.ItemTemplate>
+                     <DataTemplate>
+                         <ViewCell>
+                            <StackLayout Padding="12,6" Orientation="Horizontal">
+                                <Image HorizontalOptions="Start" WidthRequest="50" HeightRequest="50" Source="{Binding HeadImgUrl}"></Image>
+                                <StackLayout HorizontalOptions="FillAndExpand" Padding="10">
+                                    <Label Text="{Binding Name}" d:Text="{Binding Name}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="16" />
+                                    <Label FontSize="12" TextColor="#bbb" Text="{Binding Sex}" d:Text="Item description" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}"  />
+                                </StackLayout>
+                                <Label FontSize="10" TextColor="#bbb" Text="{Binding CreateTime,StringFormat='{0:t}'}"></Label>
+                            </StackLayout>
+
+                        </ViewCell>
+                      </DataTemplate>
+                 </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
