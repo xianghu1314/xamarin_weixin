@@ -12,6 +12,12 @@ namespace linli.Views
         {
             InitializeComponent();
             BindingContext = serviceViewModel = new ServiceViewModel();
+            PositionPicker.SelectedIndex = 0;
+        }
+
+        public void PickerSelectedIndexChanged(object sender, EventArgs e)
+        {
+            //labelPosition.Text = PositionPicker.SelectedItem.ToString();
         }
     }
 }

@@ -62,7 +62,13 @@ namespace linli.CustemViews
                                 Orientation=StackOrientation.Vertical,
                                 Children={
                                     new Label{Text=this.message.FromUser.Name,HorizontalOptions=LayoutOptions.End,FontSize=FontSizeMicro,TextColor=Color.FromHex("#555")},
-                                    new Label{Text=this.message.Content,HorizontalOptions=LayoutOptions.End,FontSize=FontSizeSmall,BackgroundColor=Color.White,Padding=new Thickness(6) },
+                                    new Frame()
+                                    {
+                                        Padding=0,
+                                        CornerRadius=10,
+                                        BackgroundColor=Color.FromHex("#abe650"),
+                                        Content =new Label{Text=this.message.Content,HorizontalOptions=LayoutOptions.End,FontSize=FontSizeSmall,BackgroundColor=Color.White,Padding=new Thickness(6) },
+                                    },
                                     new Label{Text=this.TimeFormat(this.message.CreateTime),HorizontalOptions=LayoutOptions.End,FontSize=FontSizeMicro,TextColor=Color.FromHex("#888")},
                                 }
                             },
@@ -84,7 +90,13 @@ namespace linli.CustemViews
                                 HorizontalOptions=LayoutOptions.Start,
                                 Children={
                                     new Label{Text=this.message.FromUser.Name,FontSize=FontSizeMicro,TextColor=Color.FromHex("#555")},
-                                    new Label{Text=this.message.Content,FontSize=FontSizeSmall,BackgroundColor=Color.White,Padding=new Thickness(6) },
+                                    new Frame()
+                                    {
+                                        Padding=0,
+                                        CornerRadius=10,
+                                        BackgroundColor=Color.White,
+                                        Content =new Label{Text=this.message.Content,FontSize=FontSizeSmall,BackgroundColor=Color.White,Padding=new Thickness(6) },
+                                    },
                                     new Label{Text=this.TimeFormat(this.message.CreateTime),FontSize=FontSizeMicro,TextColor=Color.FromHex("#888")},
                                 }
                             },
@@ -106,7 +118,13 @@ namespace linli.CustemViews
                                 Orientation=StackOrientation.Vertical,
                                 Children={
                                     new Label{Text=this.message.FromUser.Name,HorizontalOptions=LayoutOptions.End,FontSize=FontSizeMicro,TextColor=Color.FromHex("#555")},
-                                    new Image{Source=this.message.Content,IsOpaque=true,WidthRequest=App.ScreenWidth*0.6,Aspect=Aspect.AspectFit,HorizontalOptions=LayoutOptions.End,BackgroundColor=Color.White },
+                                    new Frame()
+                                    {
+                                        Padding=0,
+                                        CornerRadius=10,
+                                        BackgroundColor=Color.FromHex("#abe650"),
+                                        Content =new Image{Source=this.message.Content,IsOpaque=true,WidthRequest=App.ScreenWidth*0.6,Aspect=Aspect.AspectFit,HorizontalOptions=LayoutOptions.End,BackgroundColor=Color.White },
+                                    },
                                     new Label{Text=this.TimeFormat(this.message.CreateTime),HorizontalOptions=LayoutOptions.End,FontSize=FontSizeMicro,TextColor=Color.FromHex("#888")},
                                 }
                             },
@@ -128,7 +146,12 @@ namespace linli.CustemViews
                                 HorizontalOptions=LayoutOptions.Start,
                                 Children={
                                     new Label{Text=this.message.FromUser.Name,FontSize=FontSizeMicro,TextColor=Color.FromHex("#555")},
-                                    new Image{Source=this.message.Content,IsOpaque=true,WidthRequest=App.ScreenWidth*0.6,Aspect=Aspect.AspectFit,HorizontalOptions=LayoutOptions.End,BackgroundColor=Color.White },
+                                    new Frame()
+                                    {
+                                        Padding=0,
+                                        CornerRadius=10,
+                                        Content =new Image{Source=this.message.Content,IsOpaque=true,WidthRequest=App.ScreenWidth*0.6,Aspect=Aspect.AspectFit,HorizontalOptions=LayoutOptions.End,BackgroundColor=Color.White },
+                                    },
                                     new Label{Text=this.TimeFormat(this.message.CreateTime),FontSize=FontSizeMicro,TextColor=Color.FromHex("#888")},
                                 }
                             },

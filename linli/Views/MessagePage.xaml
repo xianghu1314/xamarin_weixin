@@ -36,7 +36,7 @@
                 <Editor x:Name="editor" BackgroundColor="#fff" HorizontalOptions="FillAndExpand" Margin="0"/>
                 <ImageButton Clicked="btn_OpenActionSheet_Clicked" WidthRequest="40"  Padding="5" x:Name="btn_OpenActionSheet" Source="open.png" />
             </StackLayout>
-            <ScrollView x:Name="bottomView" IsVisible="true" MinimumHeightRequest="400" Orientation="Vertical">
+            <ScrollView x:Name="bottomView" IsVisible="false" MinimumHeightRequest="400" Orientation="Vertical">
                 <FlexLayout Wrap="Wrap" >
                         <StackLayout HeightRequest="62" Margin="0,5" VerticalOptions="Center" HorizontalOptions="Center" FlexLayout.Basis="25%">
                             <ImageButton Aspect="AspectFill" Padding="6" BorderWidth="0" HorizontalOptions="Center" HeightRequest="42" WidthRequest="42"  BackgroundColor="White" Source="zhaopian.png"></ImageButton>

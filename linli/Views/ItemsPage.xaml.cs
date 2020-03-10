@@ -26,15 +26,16 @@ namespace linli.Views
             BindingContext = viewModel = new ItemsViewModel();
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        async void OnItemSelected(object sender, SelectionChangedEventArgs e)
         {
-            var item = args.SelectedItem as User;
+
+            var item = e.CurrentSelection.FirstOrDefault() as User;
             if (item == null)
                 return;
 
             await Navigation.PushAsync(new MessagePage(new MessageViewModel(item)));
             // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+            ItemsCollectionView.SelectedItem = null;
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)

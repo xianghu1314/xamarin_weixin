@@ -44,6 +44,7 @@ namespace linli.ViewModels
                 {
                     Items.Add(item);
                 }
+                
             }
             catch (Exception ex)
             {

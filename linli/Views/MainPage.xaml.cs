@@ -21,7 +21,7 @@ namespace linli.Views
             BarTextColor = Color.FromHex("#61c06e");
             SelectedTabColor = Color.FromHex("#61c06e");
             //为选中的tab颜色
-            UnselectedTabColor = Color.FromHex("#343434");
+            UnselectedTabColor = Color.FromHex("#a3a2a8");
         }
     }
 }

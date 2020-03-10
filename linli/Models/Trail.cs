@@ -11,6 +11,7 @@ namespace linli.Models
         public string[] Images { get; set; }
         public DateTime CreateTime { get; set; }
         public List<TrailComment> Comments { get; set; }
+        public float CommentsHeight { get { return this.Comments.Count * 24; } }
 
     }
     public class TrailComment

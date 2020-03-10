@@ -7,9 +7,10 @@
     <ContentPage.Content>
         <StackLayout>
              <SearchBar x:Name="searchBar" Placeholder="搜索" TextColor="Gray" BackgroundColor="White"></SearchBar>
-             <ListView ItemsSource="{Binding Attentions}"
+             <ListView x:Name="ItemsListView" ItemsSource="{Binding Attentions}"
                       IsGroupingEnabled="true"
                       BackgroundColor="White"
+                      ItemSelected="OnItemSelected"
                       GroupDisplayBinding="{Binding GroupTitle}"
                       GroupShortNameBinding="{Binding ShortName}">
                  <ListView.RowHeight>
